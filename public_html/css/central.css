@@ -4,6 +4,11 @@
 */
 
 /*School Monogram */
+html{
+    background: windowframe;
+}
+
+/*School Logo*/
 .sLogo{
     display: block;
     width: 10%;
@@ -19,8 +24,9 @@
     width: 90%;
     height: 100px;
     padding: 5px;
-    color: darkblue;
+    color: black;
     text-align: center;
+    font-weight: bolder;
     font-size: 35px;
     margin-bottom: 0;
     background-image: url("../images/1.jpg");
@@ -63,14 +69,34 @@ a:hover{
     clear: both;
 }
 
+/*left hand side dash board , which takes 2/12 grids*/
 .dashboard{
     display: block;
-    background: graytext;
+    background: url("../images/1.jpg");
     height: 450px;
-    width:20%;
-    
-}
+    width:16.66%;
+    float : left;
+    background-position: 50px;
+    border: solid 1px gray;
+    }
 
+/*content area row*/
+ .row1{
+    display: block;
+    background: url("../images/1.jpg");
+    border: solid 3px black;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 2%;
+    height: 25%;
+    padding-bottom: 10%;
+    background-size: contain;
+    
+ }
+    
+    
 /* Grid system starts here*/
 .row {
 	margin-right: -20px;
