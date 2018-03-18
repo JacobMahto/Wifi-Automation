@@ -33,7 +33,7 @@ html{
     background-size: contain;
     box-sizing: border-box;
     margin-top:-7px;
-    }
+}
 .heading p{
     margin: 0;
 }
@@ -44,20 +44,20 @@ nav{
     display: block;
     background: gray;
     padding : 5px;   
-    
+
 }
 a{
-    	display: inline;
-	color: whitesmoke;
-	text-decoration: none;	
-        padding: 10px 50px ;
-	border: 3px solid black;
-	border-bottom: none;
-        float : left;
-        margin-right: 20px;
-        font-family: sans-serif;    
-        transition: all;
-        transition-duration: 1s;
+    display: inline;
+    color: whitesmoke;
+    text-decoration: none;	
+    padding: 10px 50px ;
+    border: 3px solid black;
+    border-bottom: none;
+    float : left;
+    margin-right: 20px;
+    font-family: sans-serif;    
+    transition: all;
+    transition-duration: 1s;
 }
 
 a:hover{
@@ -65,23 +65,45 @@ a:hover{
     color: black;
 }
 
-.fix{
-    clear: both;
+
+
+
+.mainframe{
+    height: 100%;
+    width:100%;
 }
 
+
 /*left hand side dash board , which takes 2/12 grids*/
-.dashboard{
+.mainframe div.dashboard{
     display: block;
-    background: url("../images/1.jpg");
-    height: 450px;
+    background: url("../images/1.jpg");    
     width:16.66%;
+    /*height: 30%;*/ /*Why is the height tag not working*/
+    padding-bottom: 30%;    
     float : left;
     background-position: 50px;
     border: solid 1px gray;
-    }
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.absolute-container{
+    position: absolute;
+}
+
+.status{
+    position: relative;/*See , adding lines of this class in dashboard will not result in the elongation of Dashboard , because it has been set to absolute.*/
+    text-align: justify;
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 25px;
+    
+}
 
 /*content area row*/
- .row1{
+.row1{
     display: block;
     background: url("../images/1.jpg");
     border: solid 3px black;
@@ -92,21 +114,30 @@ a:hover{
     margin: 2%;
     height: 25%;
     padding-bottom: 10%;
-    background-size: contain;
-    
- }
-    
-    
+    background-size: contain;    
+}
+
+/*footer*/
+footer{
+    background-color: black;
+    color:lightgray;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+
 /* Grid system starts here*/
 .row {
-	margin-right: -20px;
+    margin-right: -20px;
 }
 
 .col {
-	width: 100%;
-	float: left;
-	padding-right: 20px;
-	box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 .col-xs-11 {width: 91.662%}
@@ -122,71 +153,75 @@ a:hover{
 .col-xs-1 {width: 8.332%;}
 
 @media screen and (min-width: 768px) {
-	
-	.row {
-		margin-right: -40px;
-	}
-	
-	.col {
-		padding-right: 40px;
-	}
-		
-	.col-sm-11 {width: 91.662%}
-	.col-sm-10 {width: 83.332%;}
-	.col-sm-9 {width: 75%;}
-	.col-sm-8 {width: 66.662%;}
-	.col-sm-7 {width: 58.331%}
-	.col-sm-6 {width: 50%;}
-	.col-sm-5 {width: 41.662%}
-	.col-sm-4 {width: 33.332%;}
-	.col-sm-3 {width: 25%;}
-	.col-sm-2 {width: 16.662%;}
-	.col-sm-1 {width: 8.332%;}
-	
+
+    .row {
+        margin-right: -40px;
+    }
+
+    .col {
+        padding-right: 40px;
+    }
+
+    .col-sm-11 {width: 91.662%}
+    .col-sm-10 {width: 83.332%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-8 {width: 66.662%;}
+    .col-sm-7 {width: 58.331%}
+    .col-sm-6 {width: 50%;}
+    .col-sm-5 {width: 41.662%}
+    .col-sm-4 {width: 33.332%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-2 {width: 16.662%;}
+    .col-sm-1 {width: 8.332%;}
+
 }
 
 @media screen and (min-width: 1024px) {
-	
-	.col-md-11 {width: 91.662%}
-	.col-md-10 {width: 83.332%;}
-	.col-md-9 {width: 75%;}
-	.col-md-8 {width: 66.662%;}
-	.col-md-7 {width: 58.331%}
-	.col-md-6 {width: 50%;}
-	.col-md-5 {width: 41.662%}
-	.col-md-4 {width: 33.332%;}
-	.col-md-3 {width: 25%;}
-	.col-md-2 {width: 16.662%;}
-	.col-md-1 {width: 8.332%;}
-	
+
+    .col-md-11 {width: 91.662%}
+    .col-md-10 {width: 83.332%;}
+    .col-md-9 {width: 75%;}
+    .col-md-8 {width: 66.662%;}
+    .col-md-7 {width: 58.331%}
+    .col-md-6 {width: 50%;}
+    .col-md-5 {width: 41.662%}
+    .col-md-4 {width: 33.332%;}
+    .col-md-3 {width: 25%;}
+    .col-md-2 {width: 16.662%;}
+    .col-md-1 {width: 8.332%;}
+
 }
 
 @media screen and (min-width: 1280px) {
-	
-	.col-lg-11 {width: 91.662%}
-	.col-lg-10 {width: 83.332%;}
-	.col-lg-9 {width: 75%;}
-	.col-lg-8 {width: 66.662%;}
-	.col-lg-7 {width: 58.331%}
-	.col-lg-6 {width: 50%;}
-	.col-lg-5 {width: 41.662%}
-	.col-lg-4 {width: 33.332%;}
-	.col-lg-3 {width: 25%;}
-	.col-lg-2 {width: 16.662%;}
-	.col-lg-1 {width: 8.332%;}
-	
+
+    .col-lg-11 {width: 91.662%}
+    .col-lg-10 {width: 83.332%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-8 {width: 66.662%;}
+    .col-lg-7 {width: 58.331%}
+    .col-lg-6 {width: 50%;}
+    .col-lg-5 {width: 41.662%}
+    .col-lg-4 {width: 33.332%;}
+    .col-lg-3 {width: 25%;}
+    .col-lg-2 {width: 16.662%;}
+    .col-lg-1 {width: 8.332%;}
+
 }
 
 @media screen and (max-width: 1023px) {
-	.push-down-sm {
-		margin-bottom: 30px;
-	}
+    .push-down-sm {
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 767px) {
-	.push-down-sm {
-		margin-bottom: 15px;
-	}
+    .push-down-sm {
+        margin-bottom: 15px;
+    }
 }
 
 /* Grid System Ends */
+
+.fix{
+    clear: both;
+}
